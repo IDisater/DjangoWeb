@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+    <script>
+        {% if succ %}
+        alert('{{ succ }}')
+        {% endif %}
+    </script>
+
+{% for info in info_form %}
+  <div class="container">
+
+<div class="row text-center" style="height: 30px">
+
+</div>
+<div class="row">
+     <div class="col-md-8">
+          <img src="{{ MEDIA_URL }}{{info.info_img}}" alt="" style="border-radius:20px;border: 1px solid #0c5460;"></div>
+<div class="col-md-4 "><span style="display:block;font-size: 24px">公司：</span><span style="font-size: 20px">{{ info.cp_title }}</span><br>
+      <span style="display:block;font-size: 24px">职位：</span><span style="font-size: 20px">{{ info.job }}</span><br>
+      <span style="display:block;font-size: 24px">薪酬：</span><span style="font-size: 20px">{{ info.pay }}</span><br>
+      <span style="display:block;font-size: 24px">发布时间:</span><span style="font-size: 20px">{{ info.createdate|date:"Y-m-d H-i-s"}}</span><br>
+      <span style="display:block;font-size: 24px">联系邮箱：</span><span style="font-size: 20px">{{ info.cp_email }}</span><br>
+        <span style="display:block;font-size: 24px">电话：</span><span style="font-size: 20px">{{ info.cp_tel }}</span><br>
+</div>
+</div>
+
+
+
+
+
+
+
+  招聘内容：<pre style="white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;">
+
+      {{ info.info }}
+      </pre>
+    <div class="row text-right">
+        <i class="lnr lnr-eye"></i>:{{ info.views }}</div>
+<div class="container">
+    <div class="row">
+    <div class="col-6 text-right">
+         {% if is_fav %}
+        <p>已收藏</p>
+        {% else %}
+        <a href="/fav/{{ info.info_id }}/{{ request.session.user_name }}/">收藏</a>
+    {% endif %}
+    </div>
+        <div class="col-6 text-left">
+             {% if is_apply %}
+        <p>已投递</p>
+        {% else %}
+        <a href="/apply/{{ info.info_id }}/{{ request.session.user_name }}/">投递</a>
+    {% endif %}
+        </div>
+    </div>
+
+
+<div style="text-align: center">
+<form method="get" action="/add_say">
+     {% csrf_token %}
+    <input type="text" name="com_about" id="com_about">
+   <input type="hidden" name="user_name" id="user_name" value="{{ request.session.user_name }}">
+    <input type="hidden" name="info_id" id="info_id" value="{{ info.info_id }}">
+    <input type="submit" value="发送">
+</form>
+</div>
+    {% if is_say %}
+    <div >
+    {% for say in is_say %}
+<div style="border: red 2px solid" s>
+
+
+        {{ say.user_title }}: <br>{{ say.com_about }}
+ <p> 评论时间：{{ say.com_time|date:"Y-m-d H-i-s" }}</p>
+        </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+{% endfor %}
+</div>
+  </div>
+
+{% endblock %}

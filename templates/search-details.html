@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block title %}搜索结果{% endblock %}
+
+{% block content %}
+
+<span style="text-align: left;display:block;margin-left: 100px">搜索结果</span>
+{% for post in page %}
+  <div style="margin-left: 100px;border: red 2px solid">
+      <a href="{% if request.session.is_login %}/details/{{post.info_id}}/{{ request.session.user_name }}/{% else %}/index/{% endif %}"><p>{{ post.cp_title }}</p>
+  <span style="display: -webkit-box;display: -moz-box;white-space: pre-wrap;word-wrap: break-word;
+overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp:5;margin-right: 100px">{{ post.info }}</span></a><br>
+
+
+  </div>
+
+{% endfor %}
+    {% if page %}
+    <nav aria-label="Page navigation" style="position: fixed;right: 60px;bottom: 50px">
+        <div class="pagination" >
+            <ul class="pagination" >
+            {% if page.has_previous %}
+                <li><a href="/search/{{page.previous_page_number}}/?q={{ request.session.q }}" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span></a></li>
+            {% endif %}
+
+            {% for num in page.paginator.page_range%}
+                {%if pindex == page.number%}
+                    <li ><a href="/search/{{ num }}/?q={{ request.session.q }}">{{ num }}</a></li>
+
+                {%else%}
+                    <li><a href="/search/{{num}}/?q={{ request.session.q }}">{{ num }}</a></li>
+
+                {%endif%}
+
+             {% endfor %}
+
+
+             {% if page.has_next %}
+                 <li><a href="/search/{{page.next_page_number}}/?q={{ request.session.q }}" aria-label="Next">
+                      <span aria-hidden="true" >下一页</span></a></li>
+              {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% endif %}
+{% endblock %}

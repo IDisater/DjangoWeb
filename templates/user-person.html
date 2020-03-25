@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}修改信息{% endblock %}
+ <link rel="shortcut icon" href="../static/img/logo1.png" type="image/x-icon" />
+
+    <!-- Google fonts include -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900%7CYesteryear" rel="stylesheet">
+
+    <!-- All Vendor & plugins CSS include -->
+    <link href="../static/css/vendor.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="../static/css/style.css" rel="stylesheet">
+       <!--[if lt IE 9]>
+<script src="/oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+     <script src="../static/js/vendor.js"></script>
+    <!-- Active Js -->
+    <script src="../static/js/active.js"></script>
+{% block content %}
+    <script>
+        {% if message %}
+            alert('{{ message }}')
+        {% endif %}
+    </script>
+
+<div class="container">
+        <div class="col-md-4 ">
+    <h2>修改个人信息</h2>
+<div class="control-group"> <label class="control-label" >账户：</label>
+    <lable >{{ request.session.user_name }}</lable></div>
+ {% for person in person_list %}
+
+    <form action="/change_o/{{ request.session.user_name }}/" method="post"  class="form-horizontal" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+  <img src="{{ MEDIA_URL }}{{ person.user_img }}" alt="hello" style="width: 150px;height: 150px">
+{#            <input type="file" name="user_img">#}
+
+
+
+        <div class="control-group"> <label class="control-label" >昵称：</label><input type="text" name="user_title" value="{{ person.user_title }}"></div>
+            <div class="control-group">
+                <label class="control-label" >性别：</label><br>
+                <select name="user_sex" data-value="">
+            <option  value="male">男</option>
+            <option value="female">女</option>
+            </select><br></div><br>
+        <div class="control-group"> <label class="control-label" >邮箱：</label><input type="email" name="user_email" value="{{ person.user_email }}"></div>
+        <div class="control-group"> <label class="control-label" >电话：</label><input type="text" name="user_tel" value="{{ person.user_tel }}"></div>
+        <div class="control-group"> <label class="control-label" >地址:</label><input type="text" name="address" value="{{ person.address }}"></div>
+        <div class="control-group"> <label class="control-label" >自我介绍：</label><input type="text" name="user_about" value="{{ person.user_about }}"></div>
+        <button type="reset" class="btn btn-default pull-left">重置</button>
+              <button type="submit" class="btn btn-primary pull-right">提交</button>
+
+    </form>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}

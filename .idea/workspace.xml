@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2da39ac4-275b-4b06-b49c-89b3ffabb02c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="DjangoWeb" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1RVFfgetj16ygMt11DCaKeffG8N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/img/test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/testapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.DjangoWeb">
+    <configuration name="Test: testapp" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="DjangoWeb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="testapp" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="add_info.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DjangoWeb/templates/add_info.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="loader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DjangoWeb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/template" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/template/loader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DjangoWeb" type="Python.DjangoServer" factoryName="Django server">
+      <module name="DjangoWeb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="DjangoWeb.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Software\Python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/index" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.DjangoWeb" />
+      <item itemvalue="Django tests.Test: testapp" />
+      <item itemvalue="JavaScript Debug.add_info.html" />
+      <item itemvalue="Python.loader" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: testapp" />
+        <item itemvalue="JavaScript Debug.add_info.html" />
+        <item itemvalue="Python.loader" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2da39ac4-275b-4b06-b49c-89b3ffabb02c" name="Default Changelist" comment="" />
+      <created>1569744460954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569744460954</updated>
+      <workItem from="1569744462377" duration="7409000" />
+      <workItem from="1569770445238" duration="1331000" />
+      <workItem from="1569773149943" duration="996000" />
+      <workItem from="1569824600784" duration="24198000" />
+      <workItem from="1569851108221" duration="5972000" />
+      <workItem from="1569943271797" duration="216000" />
+      <workItem from="1569981629776" duration="7308000" />
+      <workItem from="1570023975424" duration="5304000" />
+      <workItem from="1570069794590" duration="1733000" />
+      <workItem from="1570074025483" duration="3365000" />
+      <workItem from="1570106882713" duration="6930000" />
+      <workItem from="1570154372216" duration="6074000" />
+      <workItem from="1570700436978" duration="1203000" />
+      <workItem from="1570768810287" duration="160000" />
+      <workItem from="1570936959004" duration="2549000" />
+      <workItem from="1570946534771" duration="3128000" />
+      <workItem from="1570966480107" duration="169000" />
+      <workItem from="1572012552081" duration="1759000" />
+      <workItem from="1572162536794" duration="1222000" />
+      <workItem from="1572163794617" duration="1156000" />
+      <workItem from="1572418857369" duration="6020000" />
+      <workItem from="1572424905357" duration="2639000" />
+      <workItem from="1572576745881" duration="694000" />
+      <workItem from="1574671502828" duration="4190000" />
+      <workItem from="1574680153210" duration="7882000" />
+      <workItem from="1574757317250" duration="4238000" />
+      <workItem from="1574920838606" duration="107000" />
+      <workItem from="1574929213032" duration="3152000" />
+      <workItem from="1574932846729" duration="10131000" />
+      <workItem from="1574944624771" duration="5365000" />
+      <workItem from="1575012196124" duration="7440000" />
+      <workItem from="1575019882083" duration="2269000" />
+      <workItem from="1575116067337" duration="2960000" />
+      <workItem from="1575441377870" duration="608000" />
+      <workItem from="1575442546820" duration="64000" />
+      <workItem from="1575445719794" duration="469000" />
+      <workItem from="1575447053790" duration="944000" />
+      <workItem from="1575449692928" duration="2005000" />
+      <workItem from="1575456902707" duration="9830000" />
+      <workItem from="1575547527471" duration="11925000" />
+      <workItem from="1575620090956" duration="15211000" />
+      <workItem from="1575645064438" duration="722000" />
+      <workItem from="1575691480516" duration="37803000" />
+      <workItem from="1575776633341" duration="498000" />
+      <workItem from="1575781765177" duration="228000" />
+      <workItem from="1575879691781" duration="798000" />
+      <workItem from="1575883131894" duration="146000" />
+      <workItem from="1575883363309" duration="600000" />
+      <workItem from="1575887541154" duration="2247000" />
+      <workItem from="1575894327918" duration="300000" />
+      <workItem from="1575974636536" duration="177000" />
+      <workItem from="1575974848443" duration="327000" />
+      <workItem from="1575976024029" duration="570000" />
+      <workItem from="1575977162549" duration="3797000" />
+      <workItem from="1576073008184" duration="2305000" />
+      <workItem from="1576579338419" duration="3433000" />
+      <workItem from="1576810600507" duration="620000" />
+      <workItem from="1577287410009" duration="30000" />
+      <workItem from="1580823070110" duration="1187000" />
+      <workItem from="1580795485533" duration="704000" />
+      <workItem from="1581075078648" duration="2702000" />
+      <workItem from="1581077895320" duration="9445000" />
+      <workItem from="1581165390671" duration="2541000" />
+      <workItem from="1581228860333" duration="4665000" />
+      <workItem from="1581252117350" duration="11398000" />
+      <workItem from="1581396638238" duration="1876000" />
+      <workItem from="1581401823318" duration="23144000" />
+      <workItem from="1581483902164" duration="99000" />
+      <workItem from="1581484348560" duration="1784000" />
+      <workItem from="1581486183668" duration="1799000" />
+      <workItem from="1581488081723" duration="1789000" />
+      <workItem from="1581489908585" duration="1785000" />
+      <workItem from="1581491728993" duration="1784000" />
+      <workItem from="1581493563244" duration="1784000" />
+      <workItem from="1581495411048" duration="1782000" />
+      <workItem from="1581497239523" duration="1809000" />
+      <workItem from="1581499144141" duration="1785000" />
+      <workItem from="1581500970247" duration="1440000" />
+      <workItem from="1581503659712" duration="1785000" />
+      <workItem from="1581505519319" duration="1784000" />
+      <workItem from="1581507345157" duration="1786000" />
+      <workItem from="1581509168919" duration="433000" />
+      <workItem from="1581509654005" duration="1784000" />
+      <workItem from="1581512687755" duration="1782000" />
+      <workItem from="1581514506984" duration="1786000" />
+      <workItem from="1581516333396" duration="1783000" />
+      <workItem from="1581518350667" duration="927000" />
+      <workItem from="1581571061131" duration="1786000" />
+      <workItem from="1581573299376" duration="1930000" />
+      <workItem from="1581575274248" duration="1786000" />
+      <workItem from="1581577107032" duration="1783000" />
+      <workItem from="1581578935614" duration="1801000" />
+      <workItem from="1581580766496" duration="1785000" />
+      <workItem from="1581582620000" duration="1782000" />
+      <workItem from="1581584433771" duration="1786000" />
+      <workItem from="1581586248192" duration="1784000" />
+      <workItem from="1581588086033" duration="1786000" />
+      <workItem from="1581589926608" duration="1139000" />
+      <workItem from="1581593400515" duration="1781000" />
+      <workItem from="1581595271097" duration="1785000" />
+      <workItem from="1581597100139" duration="1785000" />
+      <workItem from="1581598917186" duration="1349000" />
+      <workItem from="1581600319286" duration="1786000" />
+      <workItem from="1581602161287" duration="1442000" />
+      <workItem from="1581831038380" duration="1442000" />
+      <workItem from="1581833100572" duration="4000" />
+      <workItem from="1581834522636" duration="78000" />
+      <workItem from="1581836062423" duration="925000" />
+      <workItem from="1581837257419" duration="54000" />
+      <workItem from="1581837338864" duration="3503000" />
+      <workItem from="1581842813725" duration="1003000" />
+      <workItem from="1581844446050" duration="113000" />
+      <workItem from="1581845221858" duration="163000" />
+      <workItem from="1581856654056" duration="6897000" />
+      <workItem from="1581919780927" duration="27911000" />
+      <workItem from="1582006979656" duration="3285000" />
+      <workItem from="1582037726389" duration="114000" />
+      <workItem from="1583649878731" duration="2562000" />
+      <workItem from="1584500688509" duration="5521000" />
+      <workItem from="1585040097611" duration="1041000" />
+      <workItem from="1585041155705" duration="758000" />
+      <workItem from="1585097596571" duration="2274000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="351" y="7" key="#DjangoWeb" timestamp="1583650487620">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="351" y="7" key="#DjangoWeb/0.0.1280.800@0.0.1280.800" timestamp="1583650487620" />
+    <state x="423" y="156" key="FileChooserDialogImpl" timestamp="1585040923149">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="423" y="156" key="FileChooserDialogImpl/0.0.1280.800@0.0.1280.800" timestamp="1585040923149" />
+    <state width="1238" height="202" key="GridCell.Tab.0.bottom" timestamp="1585041140414">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="202" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1585041140414" />
+    <state width="1238" height="202" key="GridCell.Tab.0.center" timestamp="1585041140414">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="202" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1585041140414" />
+    <state width="1238" height="202" key="GridCell.Tab.0.left" timestamp="1585041140414">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="202" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1585041140414" />
+    <state width="1238" height="202" key="GridCell.Tab.0.right" timestamp="1585041140414">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="202" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1585041140414" />
+    <state x="143" y="43" key="SettingsEditor" timestamp="1585040977818">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="143" y="43" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1585040977818" />
+    <state x="325" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1585097597211">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="325" y="225" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1585097597211" />
+    <state x="303" y="122" width="672" height="678" key="search.everywhere.popup" timestamp="1585098607300">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="303" y="122" width="672" height="678" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1585098607300" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/cp_register.html</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DjangoWeb$Test__testapp.coverage" NAME="Test: testapp Coverage Results" MODIFIED="1581513631453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/DjangoWeb$loader.coverage" NAME="loader Coverage Results" MODIFIED="1574672769848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/template" />
+  </component>
+</project>

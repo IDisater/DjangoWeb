@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布招聘</title>
+     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="/static/js/jquery-3.4.1.js"></script>
+	<script src="/static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<style>
+    .input1{
+        height: 300px;
+        width: 500px;
+    }
+</style>
+
+        <script>
+            {% if succ %}
+        alert('{{ succ }}')
+            {% endif %}
+        </script>
+
+</head>
+<body>
+{% if succ %}
+    <a href="/cp_index">返回主页</a>
+{% endif %}
+ <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+
+          <form class='form-register' action="/add_info/{{ request.session.cp_name }}/" method="post" enctype="multipart/form-data">
+
+              {% if succ %}
+                  <div class="alert alert-warning">{{ succ }}</div>
+              {% endif %}
+
+              {% csrf_token %}
+   {% for info in add_info %}
+              <h2 class="text-center">发布招聘</h2>
+                公司名称：<input type="text" name="cp_title" value="{{ info.cp_title }}"><br>
+                岗位：<input type="text" name="job" ><br>
+                薪酬：<input type="text" name="pay" ><br>
+                岗位类别：<select name="classes">
+                    <option value="it">计算机</option>
+                    <option value="service">服务业</option>
+                    <option value="financial">金融</option>
+                    <option value="realty">房地产</option>
+                    <option value="medical">医疗</option>
+                    <option value="education">教育</option>
+
+                    </select><br>
+                公司邮箱：<input type="email" name="cp_email" value="{{ info.cp_email }}"><br>
+                公司电话：<input type="text" name="cp_tel" value="{{ info.cp_tel }}"><br>
+                公司地址<input type="text" name="cp_address" value="{{ info.cp_address }}"><br>
+                岗位描述：<textarea cols="40" rows="7" name="info" ></textarea><br>
+                宣传图：<input type="file" name="info_img" >
+              <button type="reset" class="btn btn-default pull-left">重置</button>
+              <button type="submit" class="btn btn-primary pull-right">提交</button>
+ {% endfor %}
+   <!--<button type="reset" class="btn btn-default pull-left">重置</button>
+              <button type="submit" class="btn btn-primary pull-right">提交</button>-->
+          </form>
+
+        </div>
+    </div> <!-- /container -->
+
+</body>

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}分类{% endblock %}
+{% block content %}
+
+ <h2 style="text-align: center">{{ cclasess.get_classes_display}}</h2>
+{{ classes.keys }}
+{% for info in page %}
+
+    <div style="margin-left: 100px;border: red 2px solid;margin-right: 100px">
+    <a href="{% if request.session.is_login %}/details/{{info.info_id}}/{{ request.session.user_name }}/{% else %}/login/{% endif %}">
+        <P>{{ info.cp_title }}</P><P><span >{{ info.job }}</span></P><P><span style="display: -webkit-box;display: -moz-box;white-space: pre-wrap;word-wrap: break-word;
+overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp:5;margin-right: 100px">{{ info.info }}</span></P></a>
+    </div>
+{% endfor %}
+    <nav aria-label="Page navigation" style="position: fixed;right: 60px;bottom: 50px">
+        <div class="pagination" >
+            <ul class="pagination" >
+            {% if page.has_previous %}
+                <li><a href="/classes/{{ classes }}/?pindex={{page.previous_page_number}}" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span></a></li>
+            {% endif %}
+
+            {% for num in page.paginator.page_range%}
+                {%if pindex == page.number%}
+                    <li ><a href="?pindex=">{{ num }}</a></li>
+
+                {%else%}
+                    <li><a href="?pindex={{num}}">{{ num }}</a></li>
+
+                {%endif%}
+
+             {% endfor %}
+
+
+             {% if page.has_next %}
+                 <li><a href="/classes/{{ classes }}/?pindex={{page.next_page_number}}" aria-label="Next">
+                      <span aria-hidden="true" >下一页</span></a></li>
+              {% endif %}
+            </ul>
+        </div>
+    </nav>
+{% endblock %}

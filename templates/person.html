@@ -1,0 +1,17 @@
+
+{% extends 'cp_index.html' %}
+{% block title %}详情{% endblock %}
+{% block content %}
+    <h1 class="page-title">
+					<i class="icon-th-list"></i>
+					<a  href="#" onClick="javascript :history.back(-1);" style="text-decoration: none;color: whitesmoke">返回</a>
+				</h1>
+{% for person in user %}
+    <h2>{{ person.user_title }}的个人简历</h2><br>
+    {{ person.get_user_sex_display }}<br>
+    {{ person.user_email }}<br>
+    {{ person.address }}<br>
+    {{ person.user_tel}}<br>
+    {{ person.user_about }}<br>
+{% endfor %}
+{% endblock %}

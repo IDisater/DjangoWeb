@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block title %}我的收藏{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+    <h2>我的收藏</h2>
+    </div>
+    <div class="container-fluid ">
+	<div class="row-fluid">
+		<div class="span12">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th class="w-25">
+							编号
+						</th>
+						<th>
+							公司名称
+						</th>
+						<th class="w-25">
+							岗位
+						</th>
+                        <th style="width: 5%">
+							薪酬
+						</th>
+						<th style="width: 15%">
+{#							状态#}
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                {% for love in page %}
+					<tr class="info">
+						<td>
+							{{love.id}}
+						</td>
+						<td>
+							{{love.cp_title}}
+						</td>
+						<td>
+							{{love.job}}
+						</td>
+                        <td>
+							{{love.pay}}
+						</td>
+
+						<td>
+                            <a href="/details/{{love.info_id}}/{{ request.session.user_name }}/"> 查看</a>
+						</td>
+					</tr>
+                {% endfor %}
+{#					<tr class="success">#}
+{#						<td>#}
+{#							1#}
+{#						</td>#}
+{#						<td>#}
+{#							TB - Monthly#}
+{#						</td>#}
+{#						<td>#}
+{#							01/04/2012#}
+{#						</td>#}
+{#						<td>#}
+{#							Approved#}
+{#						</td>#}
+{#					</tr>#}
+{#					<tr class="error">#}
+{#						<td>#}
+{#							2#}
+{#						</td>#}
+{#						<td>#}
+{#							TB - Monthly#}
+{#						</td>#}
+{#						<td>#}
+{#							02/04/2012#}
+{#						</td>#}
+{#						<td>#}
+{#							Declined#}
+{#						</td>#}
+{#					</tr>#}
+{#					<tr class="warning">#}
+{#						<td>#}
+{#							3#}
+{#						</td>#}
+{#						<td>#}
+{#							TB - Monthly#}
+{#						</td>#}
+{#						<td>#}
+{#							03/04/2012#}
+{#						</td>#}
+{#						<td>#}
+{#							Pending#}
+{#						</td>#}
+{#					</tr>#}
+{#					<tr class="info">#}
+{#						<td>#}
+{#							4#}
+{#						</td>#}
+{#						<td>#}
+{#							TB - Monthly#}
+{#						</td>#}
+{#						<td>#}
+{#							04/04/2012#}
+{#						</td>#}
+{#						<td>#}
+{#							Call in to confirm#}
+{#						</td>#}
+{#					</tr>#}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<nav aria-label="Page navigation" style="position: fixed;right: 60px;bottom: 50px">
+        <div class="pagination" >
+            <ul class="pagination" >
+            {% if page.has_previous %}
+                <li><a href="/mylove/{{ request.session.user_name }}/?pindex={{page.previous_page_number}}" aria-label="Previous">
+                    <span aria-hidden="true">上一页</span></a></li>
+            {% endif %}
+
+            {% for num in page.paginator.page_range%}
+                {%if pindex == page.number%}
+                    <li ><a href="?pindex=">{{ num }}</a></li>
+
+                {%else%}
+                    <li><a href="?pindex={{num}}">{{ num }}</a></li>
+
+                {%endif%}
+
+             {% endfor %}
+
+
+             {% if page.has_next %}
+                 <li><a href="/mylove/{{ request.session.user_name }}/?pindex={{page.next_page_number}}" aria-label="Next">
+                      <span aria-hidden="true" >下一页</span></a></li>
+              {% endif %}
+            </ul>
+        </div>
+    </nav>
+{% endblock %}

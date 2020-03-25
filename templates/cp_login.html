@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+	<title>企业登录</title>
+		<meta charset="utf-8">
+		<link href="/static/css/login_style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: red">
+	 <!-----start-main---->
+	 <div class="main" >
+		<div class="login-form">
+			<h1>企业登录</h1>
+					<div class="head">
+						<img src="/static/img/user.png" alt=""/>
+					</div>
+				<form action="/cplogin/" method="post">
+                     {% if message %}
+                  <div class="alert alert-warning">{{ message }}</div>
+              {% endif %}
+              {% csrf_token %}
+						<input type="text" class="text" placeholder="账号"  name="cp_name">
+                    <input type="password" placeholder="密码" name="password">
+						{{ login_form.captcha }}
+                    <div class="submit">
+							<input type="submit" >
+					</div>
+                <p style="text-align: justify"><a href="/login">个人登录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="/cpregister/" style="margin-left: 100px">注册</a></p>
+				</form>
+			</div>
+			<!--//End-login-form-->
+		</div>
+			 <!-----//end-main---->
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var arr=$(".div li:not(:hidden)");
+     if(arr.length>5)
+               $(".div li:lt(4)").hide();
+   $(".btn").click(function(){
+       var arr=$(".div li:not(:hidden)");
+       if(arr.length>5)
+               $(".div li:lt(4)").hide()
+        else
+            $(".div li:lt(4)").show()
+    });
+});
+</script>
+<style>
+*{
+    margin:0;
+    padding:0;
+    }
+li{
+    list-style:none;
+    }
+.div{
+    width:300px;
+    float:left;
+    border:1px solid #066;
+    }
+.div li{
+    width:300px;
+    height:20px;
+    float:left;
+    line-height:20px;
+    }
+</style>
+</head>
+
+<body>
+<div class="div">
+ <ul>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+  <li>111111111</li>
+ </ul>
+</div>
+</body>
+</html>

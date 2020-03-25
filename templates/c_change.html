@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/c_change/" method="post">
+    {% csrf_token %}
+   {% for i in cp_list %}
+       {{ i.cp_title }}
+       {{ i.cp_about }}
+       {{ i.cp_address }}
+       {{ i.cp_email }}
+       {{ i.cp_tel }}
+    {% endfor %}
+</form>
+</body>
+</html>

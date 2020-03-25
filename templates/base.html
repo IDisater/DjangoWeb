@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <title>{% block title %}首页{% endblock %}</title>
+
+    <!--=== Favicon ===-->
+    <link rel="shortcut icon" href="/static/img/logo1.png" type="image/x-icon" />
+
+    <!-- Google fonts include -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900%7CYesteryear" rel="stylesheet">
+
+    <!-- All Vendor & plugins CSS include -->
+    <link href="/static/css/vendor.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+<script>
+    {% if error_msg %}
+    alert("{{ error_msg }}")
+    {% endif %}
+</script>
+   <script type="text/javascript">
+            function myCheck()
+            {
+              var q=document.getElementById("q").value;
+              if (q==""){
+                  alert('不能为空');
+                  return false;
+              }
+            }
+        </script>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+<script src="/oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+
+    <!-- Start Header Area -->
+    <header class="header-area">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="/index">
+                                    <img src="/static/img/logo1.png" alt="" style="height: 50px">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-2 position-static text-right" >
+                            <div class="main-menu-area" >
+                                 <div class="header-configure-area">
+                                <ul class="nav justify-content-end">
+                                 <li class="user-hover text-right" ><a href="#">
+                                               <span style="font-size: 15px">分类</span>
+                                            </a>
+                                        <ul class="dropdown-list">
+                                        <li><a href="/classes/it/?pindex=1">计算机</a></li>
+                                            <li><a href="/classes/service/?pindex=1">服务业</a></li>
+                                            <li><a href="/classes/financial/?pindex=1">金融</a></li>
+                                            <li><a href="/classes/realty/?pindex=1">房地产</a></li>
+                                            <li><a href="/classes/medical/?pindex=1">医疗</a></li>
+                                            <li><a href="/classes/education/?pindex=1">教育</a></li>
+                                        </ul></li>
+                                </ul>
+                                 </div>
+
+{#                                <div class="main-menu">#}
+{#                                    <!-- main menu navbar start -->#}
+{#                                  <div class="header-configure-wrapper">#}
+{#                                <div class="header-configure-area">#}
+{#                                        <ul class="nav justify-content-end" >#}
+{##}
+{#                                        </ul>#}
+{#                                </div>#}
+{#                                  </div>#}
+{#                                    <!-- main menu navbar end -->#}
+{#                                </div>#}
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+                        <div class="col-lg-8 text-left">
+                            <div class="header-configure-wrapper">
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+
+
+
+                                        <form class="navbar-form navbar-left" role="search" action="/search/1/" method="get">
+
+							<input type="text" placeholder="公司/职位" name="q" id="q" class="form-control w-75" value="{{ request.session.q }}"/>
+						 <button type="submit" class="btn btn-default" onclick="myCheck()">搜索</button>
+					</form>
+
+
+                                    {% if request.session.is_login %}
+                                        <li class="user-hover">
+                                            <a href="#">
+                                                 <i class="lnr lnr-user"></i>
+                                            </a>
+                                            <ul class="dropdown-list">
+                                                {% if request.session.is_login %}
+                                                    <li><a href="/change_o/{{ request.session.user_name }}">{{ request.session.user_name }}</a></li>
+                                                     <li><a href="/mylove/{{ request.session.user_name }}/?pindex=1">我的收藏</a></li>
+                                                    <li><a href="/is_apply/{{ request.session.user_name }}">已投简历</a></li>
+                                                    <li><a href="/logout">注销</a></li>
+
+
+                                                {% endif %}
+
+                                            </ul>
+                                        </li>
+                                        {% else %}
+                                        <li><a href="/login"><span style="font-size: 14px">个人登录</span></a></li>
+                                        <li><a href="/cplogin"><span style="font-size: 14px">企业登录</span></a></li>
+                                    {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart area end -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+
+        <!-- mobile header start -->
+        <div class="mobile-header d-lg-none d-md-block sticky">
+            <!--mobile header top start -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="mobile-main-header">
+                            <div class="mobile-logo">
+                                <a href="/index">
+                                    <img src="../static/img/logo1.png" alt="Brand Logo">
+                                </a>
+                            </div>
+                                <div class="mobile-menu-btn">
+                                    <div class="off-canvas-btn">
+                                        <i class="lnr lnr-menu"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile header top start -->
+
+        <!-- mobile header end -->
+    </header>
+    <!-- end Header Area -->
+{% block content %}{% endblock %}
+
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="btn-close-off-canvas">
+                <i class="lnr lnr-cross"></i>
+            </div>
+
+            <div class="off-canvas-inner">
+ <!-- search box start -->
+                <div class="search-box-offcanvas">
+                    <form  action="/search/1/" method="get" οnsubmit="return myCheck()">
+                        <input type="text" placeholder="公司/职位" name="q" id="q">
+                        <button class="search-btn" type="submit" onclick="myCheck()"><i class="lnr lnr-magnifier"></i></button>
+                    </form>
+                </div>
+                <!-- search box end -->
+
+                <div class="mobile-settings">
+                    <ul class="nav">
+                        <li>
+                            <div class="dropdown mobile-top-dropdown" style="text-align: left">
+
+                                    {% if request.session.is_login %}
+                                    <a style="text-align: left" href="/change_p/{{ request.session.user_name }}"><p>{{ request.session.user_name }}</p></a>
+                                         <a style="text-align: left" href="/mylove/{{ request.session.user_name }}"><p>我的收藏</p></a>
+                                        <a style="text-align: left" href="/is_apple/{{ request.session.user_name }}"><p>已投简历</p></a>
+
+                                        <a style="text-align: left" href="/logout"><p>注销</p></a>
+
+                                    {% endif %}
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </aside>
+    <!-- off-canvas menu end -->
+
+<!-- All vendor & plugins & active js include here -->
+    <!--All Vendor Js -->
+    <script src="/static/js/vendor.js"></script>
+    <!-- Active Js -->
+    <script src="/static/js/active.js"></script>
+
+</body>
+
+</html>
